@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #2563eb;
+  --dark-bg: #000;
+  --light-bg: #fff;
+  --dark-text: #fff;
+  --light-text: #000;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shared hero section */
+.fixal-hero {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.fixal-hero.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.fixal-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.fixal-hero p {
+  font-size: 1.125rem;
+  margin: 1rem 0;
+}
+.fixal-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.fixal-button:hover {
+  background-color: #1e40af;
+}
+
+/* Grid feature section */
+.fixal-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.fixal-feature-card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-align: left;
+  background-color: white;
+}
+.fixal-feature-card.highlighted {
+  background-color: #f0f4ff;
+  border-color: var(--primary-color);
+}
+.fixal-feature-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Dark glow features */
+.dark-glow {
+  background-color: #0d0d0d;
+  color: #cfcfcf;
+}
+.fixal-dark-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.fixal-dark-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 140, 0.1);
+}
+.fixal-dark-card img.feature-img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* Pricing cards */
+.fixal-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.fixal-pricing-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fdfdfd;
+}
+.fixal-pricing-card .price {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.fixal-pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.fixal-pricing-card li {
+  margin: 0.5rem 0;
+}
+
+/* Contact form */
+.fixal-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.fixal-contact-form input,
+.fixal-contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+.fixal-contact-form button {
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
