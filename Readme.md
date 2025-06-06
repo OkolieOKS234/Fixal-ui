@@ -3,20 +3,7 @@
 
 **Fixal** is a powerful component and section based package that tends to make building 3d websites, mobile apps, dashboards, and portfolios easier with beautiful-looking components built using TailwindCSS + React and NPM.
 
-## Project Structure
-fixal/
-├── src/
-│   ├── components/
-│   ├── sections/
-│   ├── utils/
-│   ├── hooks/
-│   ├── animations/
-│   └── App.js
-├── builder/
-├── public/
-├── docs/
-├── package.json
-└── tailwind.config.js
+
 
 ## Tools or Tech stack
 - Docusaurus
@@ -86,17 +73,50 @@ import { FixalHero, FixalButton } from 'fixal';
 const default function Homepage(){
     return (
         <FixalHero
-        headertext={Your custom header text}
-        subtitle={Your preferred subtitle}
-        ctabutton={<FixalButton text='Get Started' variant='secoundary'>}
-        bgImage={Your Image}
-        animated={3d}
-        >
+  title={yourHeader}
+  subtitle={subtitle}
+  imgSrc="/images/futuristic.png"
+  ctaButton={
+    <FixalButton
+      label="Start Now"
+      onClick={() => alert("FixalButton clicked!")}
+      variant="primary"
+      size="lg"
+      fullWidth
+    />
+  }
     )
 }
 
+// FixalFeatures Section
+<FixalFeatures
+  type="grid"
+  title="Built with Developers in Mind"
+  description="Every feature is built to be extensible and fast."
+  highlightedIndex={1}
+  features={[
+    {
+      icon: <FiZap />,
+      title: 'Performance',
+      description: 'Minimal, fast-loading UI components.',
+    },
+    {
+      img: '/assets/ai.svg',
+      title: 'AI Ready',
+      description: 'Supports smart assistants and AI modules.',
+    },
+    {
+      icon: '🎯',
+      title: 'Precision Control',
+      description: 'Tweak every part using props.',
+    },
+  ]}
+/>
 
 <Button variant="primary">Get Started</Button>
+
+
+
 ```
 
 
