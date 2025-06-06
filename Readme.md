@@ -56,6 +56,12 @@ npm install framer-motion
 
 
 ## Components
+FixalButton
+FixalInput: Input with phone number of all countries, Input with icon inside
+Cards: Cards Lazy Loading
+
+
+## Section-Based Components
 FixalHero
 1. sidebyside: Has a header text with a sub-heading under and CTA below both. Then there is an image by the right on a row(using flex)
 2. straightline: All of the above in sidebyside are  displayed in a column down

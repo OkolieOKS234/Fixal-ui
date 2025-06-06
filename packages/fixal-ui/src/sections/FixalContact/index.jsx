@@ -2,10 +2,18 @@ import React from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import '../../styles/fixal.css';
 
-const FixalContact = ({ title = "Contact Us", onSubmit = (e) => {
+// Avoid inline function default in destructuring
+const defaultSubmit = (e) => {
   e.preventDefault();
   alert("Message sent!");
-} }) => {
+};
+
+const FixalContact = (props) => {
+  const {
+    title = "Contact Us",
+    onSubmit = defaultSubmit,
+  } = props;
+
   const formRef = useScrollReveal('reveal-visible');
 
   return (
